@@ -1,0 +1,16 @@
+#app {
+  display: flex;
+  height: 100%;
+}
+
+.app__code-summary {
+  flex-basis: 60%;
+}
+
+.app__code-snippet {
+  display: flex;
+  flex-basis: 40%;
+  align-items: center;
+  justify-content: center;
+  background-color: #272823;
+}
