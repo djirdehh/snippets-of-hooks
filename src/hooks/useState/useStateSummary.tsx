@@ -41,7 +41,7 @@ export const useStateSummary = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hooks API Reference | useState
+            React Docs | Hooks API Reference - useState
           </a>
         </div>
       </div>

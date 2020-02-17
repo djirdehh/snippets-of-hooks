@@ -5,20 +5,22 @@ import { useStateHook, useEffectHook } from "./hooks";
 
 import "./styles/App.css";
 
+const listOfHooks = [useStateHook, useEffectHook];
+
 export const App = () => {
   const [currentCodeSummary, setCurrentCodeSummary] = useState<React.ReactNode>(
     useStateHook.summary
   );
   const [currentCodeSnippet, setCurrentCodeSnippet] = useState(useStateHook.snippets[0]);
-  const [listOfCodeSnippets] = useState(useStateHook.snippets);
+  const [listOfCodeSnippets, setListOfCodeSnippets] = useState(useStateHook.snippets);
 
-  const snippetDropdownOptions = listOfCodeSnippets.map((codeSnippet, idx) => {
+  const snippetDropdownOptions = listOfCodeSnippets.map(codeSnippet => {
     return { value: codeSnippet.id, label: codeSnippet.title };
   });
 
   const hookDropdownOptions = [
-    { value: "use-state", label: "useState" },
-    { value: "use-effect", label: "useEffect" }
+    { value: "useState", label: "useState" },
+    { value: "useEffect", label: "useEffect" }
   ];
 
   const [currentSnippetDropdownOption, setCurrentSnippetDropdownOption] = useState(
@@ -32,6 +34,7 @@ export const App = () => {
     <Select
       value={currentSnippetDropdownOption}
       options={snippetDropdownOptions}
+      menuPlacement="auto"
       onChange={(selectedOption: any) => {
         const selectedCodeSnippet = listOfCodeSnippets.find(
           codeSnippet => codeSnippet.id === selectedOption.value
@@ -51,7 +54,18 @@ export const App = () => {
       options={hookDropdownOptions}
       menuPlacement="top"
       onChange={(selectedOption: any) => {
-        setCurrentHookDropdownOption(selectedOption);
+        const selectedHook = listOfHooks.find(hook => hook.id === selectedOption.value);
+
+        if (selectedHook) {
+          setCurrentCodeSummary(selectedHook.summary);
+          setCurrentCodeSnippet(selectedHook.snippets[0]);
+          setListOfCodeSnippets(selectedHook.snippets);
+          setCurrentSnippetDropdownOption({
+            value: selectedHook.snippets[0].id,
+            label: selectedHook.snippets[0].title
+          });
+          setCurrentHookDropdownOption(selectedOption);
+        }
       }}
     />
   );

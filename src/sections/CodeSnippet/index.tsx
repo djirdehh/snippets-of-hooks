@@ -16,7 +16,8 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
 
   const customStyle = {
     margin: "0 0",
-    borderRadius: "0"
+    borderRadius: "0",
+    backgroundColor: "#121212"
   };
 
   const messagePromptSection =
