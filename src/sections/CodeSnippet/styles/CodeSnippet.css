@@ -1,3 +1,12 @@
+#code-snippet {
+  width: 100%;
+}
+
+.code-snippet__code {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 .code-snippet__message-prompt {
   display: flex;
   align-items: center;
@@ -7,4 +16,24 @@
 .code-snippet__message-prompt span {
   padding-left: 10px;
   font-size: 14px;
+}
+
+.code-snippet__footer {
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.code-snippet__footer-checkbox {
+  font-family: Hind;
+  font-size: 11px;
+  width: 115px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.code-snippet__footer-checkbox input {
+  margin-right: 5px;
 }

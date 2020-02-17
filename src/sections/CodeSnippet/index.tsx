@@ -17,7 +17,8 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
   const customStyle = {
     margin: "0 0",
     borderRadius: "0",
-    backgroundColor: "#121212"
+    backgroundColor: "#121212",
+    fontSize: codeSnippet.fontSize ? codeSnippet.fontSize : 16
   };
 
   const messagePromptSection =
@@ -29,29 +30,45 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
 
   return (
     <div id="code-snippet">
-      <button onClick={() => setShowPrompts(!showPrompts)}>Toggle prompts</button>
-      <SyntaxHighlighter
-        language="javascript"
-        style={okaidia}
-        customStyle={customStyle}
-        wrapLines={true}
-        lineProps={lineNumber => ({
-          style: {
-            display: "block",
-            padding: "5px 10px",
-            cursor:
-              showPrompts && lineNumber.toString() in codeSnippet.notes ? "pointer" : "",
-            backgroundColor:
-              showPrompts && lineNumber.toString() in codeSnippet.notes ? "#3e4038" : ""
-          },
-          onClick() {
-            setMessagePrompt(codeSnippet.notes[lineNumber]);
-          }
-        })}
-      >
-        {codeSnippet.code}
-      </SyntaxHighlighter>
-      <div>{messagePromptSection}</div>
+      <div className="code-snippet__code">
+        <SyntaxHighlighter
+          language="javascript"
+          style={okaidia}
+          customStyle={customStyle}
+          wrapLines={true}
+          lineProps={lineNumber => ({
+            style: {
+              display: "block",
+              padding: "5px 10px",
+              cursor:
+                showPrompts && lineNumber.toString() in codeSnippet.notes
+                  ? "pointer"
+                  : "",
+              backgroundColor:
+                showPrompts && lineNumber.toString() in codeSnippet.notes ? "#292d38" : ""
+            },
+            onClick() {
+              setMessagePrompt(codeSnippet.notes[lineNumber]);
+            }
+          })}
+        >
+          {codeSnippet.code}
+        </SyntaxHighlighter>
+      </div>
+      {/* <div>{messagePromptSection}</div> */}
+      <div className="code-snippet__footer">
+        <div
+          className="code-snippet__footer-checkbox"
+          onClick={() => setShowPrompts(!showPrompts)}
+        >
+          <input
+            type="checkbox"
+            checked={showPrompts}
+            onChange={() => setShowPrompts(!showPrompts)}
+          />
+          Toggle prompts
+        </div>
+      </div>
     </div>
   );
 };

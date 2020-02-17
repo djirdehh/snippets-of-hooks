@@ -7,11 +7,14 @@ export const effectWithDependency: CodeSnippet = {
 
   export const FunctionComponent = () => {
     useEffect(() => {
-      console.log("run for first render and when 'dependency' changes");
+      console.log(
+        \`run for first render and when
+        'dependency' changes\`
+      );
     }, [dependency]);
   };`,
   notes: {
-    "6":
+    "9":
       "Passing a dependency in the dependencies list will tell React to re-run the effect every time the dependency changes."
   }
 };

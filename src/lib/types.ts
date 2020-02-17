@@ -5,4 +5,5 @@ export interface CodeSnippet {
   notes: {
     [index: string]: string;
   };
+  fontSize?: number;
 }

@@ -28,5 +28,6 @@ export const updateStateWithPreviousState: CodeSnippet = {
       "Use the functional update form of the update state function. Function passed in has access to previous state value.",
     "13":
       "Use the functional update form of the update state function. Function passed in has access to previous state value."
-  }
+  },
+  fontSize: 15
 };

@@ -7,11 +7,12 @@ export const effectWithCleanUp: CodeSnippet = {
 
   export const FunctionComponent = () => {
     useEffect(() => {
-      console.log("run for every component render);
+      console.log("run for every component render");
 
       return () => {
         console.log(
-          "run before the next effect and when component un-mounts"
+          \`run before the next effect and when 
+          component un-mounts\`
         )
       }
     });
@@ -27,5 +28,6 @@ export const effectWithCleanUp: CodeSnippet = {
       "Function returned from the effect callback is the effect clean-up. The clean-up runs before the effect of the next render is to run or when the component un-mounts.",
     "11":
       "Function returned from the effect callback is the effect clean-up. The clean-up runs before the effect of the next render is to run or when the component un-mounts."
-  }
+  },
+  fontSize: 15
 };
