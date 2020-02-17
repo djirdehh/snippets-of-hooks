@@ -1,9 +1,9 @@
-import { CodeSample } from "../../lib/types";
+import { CodeSnippet } from "../../lib/types";
 
-export const initialize: CodeSample = {
+export const initialize: CodeSnippet = {
   id: "useState_01",
   title: "Initialize and use state variable",
-  snippet: `import React, { useState } from "react";
+  code: `import React, { useState } from "react";
 
   export const FunctionComponent = () => {
     const [superhero] = useState("Spider-Man");

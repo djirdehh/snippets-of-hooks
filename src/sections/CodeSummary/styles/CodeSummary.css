@@ -1,5 +1,6 @@
 #code-summary {
-  padding-bottom: 40px;
+  margin-top: auto;
+  padding: 0 30px;
 }
 
 .code-summary__title {
@@ -11,6 +12,10 @@
 .code-summary__signature {
   font-size: 18px;
   font-weight: 600;
+}
+
+.code-summary__dropdown-section {
+  max-width: 400px;
 }
 
 .code-summary__section-title {

@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { CodeSample } from "../../lib/types";
+import { CodeSnippet as ICodeSnippet } from "../../lib/types";
 import { FiInfo } from "react-icons/fi";
 
 import "./styles/CodeSnippet.css";
 
 interface Props {
-  codeSample: CodeSample;
+  codeSnippet: ICodeSnippet;
 }
 
-export const CodeSnippet = ({ codeSample }: Props) => {
-  // const [lineNumberHover, setLineNumberHover] = useState<number | null>(null);
+export const CodeSnippet = ({ codeSnippet }: Props) => {
   const [showPrompts, setShowPrompts] = useState(false);
   const [messagePrompt, setMessagePrompt] = useState("");
 
@@ -40,16 +39,16 @@ export const CodeSnippet = ({ codeSample }: Props) => {
             display: "block",
             padding: "5px 10px",
             cursor:
-              showPrompts && lineNumber.toString() in codeSample.notes ? "pointer" : "",
+              showPrompts && lineNumber.toString() in codeSnippet.notes ? "pointer" : "",
             backgroundColor:
-              showPrompts && lineNumber.toString() in codeSample.notes ? "#3e4038" : ""
+              showPrompts && lineNumber.toString() in codeSnippet.notes ? "#3e4038" : ""
           },
           onClick() {
-            setMessagePrompt(codeSample.notes[lineNumber]);
+            setMessagePrompt(codeSnippet.notes[lineNumber]);
           }
         })}
       >
-        {codeSample.snippet}
+        {codeSnippet.code}
       </SyntaxHighlighter>
       <div>{messagePromptSection}</div>
     </div>

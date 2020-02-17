@@ -7,9 +7,18 @@
 
 .app__code-summary {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex-basis: 60%;
-  padding: 0 30px;
+}
+
+.app__code-summary-footer {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.app__code-summary-footer-dropdown {
+  min-width: 140px;
 }
 
 .app__code-snippet {

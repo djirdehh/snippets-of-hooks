@@ -1,7 +1,7 @@
-export interface CodeSample {
+export interface CodeSnippet {
   id: string;
   title: string;
-  snippet: string;
+  code: string;
   notes: {
     [index: string]: string;
   };
