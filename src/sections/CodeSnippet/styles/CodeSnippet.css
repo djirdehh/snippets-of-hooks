@@ -1,0 +1,10 @@
+.code-snippet__message-prompt {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.code-snippet__message-prompt span {
+  padding-left: 10px;
+  font-size: 14px;
+}

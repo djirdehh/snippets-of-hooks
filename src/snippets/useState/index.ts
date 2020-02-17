@@ -1,1 +1,2 @@
-export { basic } from "./basic";
+export { initialize } from "./initialize";
+export { initializeWithFunction } from "./initializeWithFunction";
