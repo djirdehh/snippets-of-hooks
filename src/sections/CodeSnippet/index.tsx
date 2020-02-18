@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { CodeSnippet as ICodeSnippet } from "../../lib/types";
-import { FiInfo } from "react-icons/fi";
+import { FiExternalLink, FiMessageCircle } from "react-icons/fi";
 
 import "./styles/CodeSnippet.css";
 
@@ -14,6 +14,11 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
   const [showPrompts, setShowPrompts] = useState(false);
   const [messagePrompt, setMessagePrompt] = useState("");
 
+  useEffect(() => {
+    setShowPrompts(false);
+    setMessagePrompt("");
+  }, [codeSnippet]);
+
   const customStyle = {
     margin: "0 0",
     borderRadius: "0",
@@ -23,9 +28,10 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
 
   const messagePromptSection =
     showPrompts && messagePrompt ? (
-      <div className="code-snippet__message-prompt">
-        <FiInfo color="#FFF" size={18} /> <span>{messagePrompt}</span>
-      </div>
+      <blockquote className="code-snippet__message-prompt">
+        <FiMessageCircle />
+        <span>{messagePrompt}</span>
+      </blockquote>
     ) : null;
 
   return (
@@ -55,10 +61,10 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
           {codeSnippet.code}
         </SyntaxHighlighter>
       </div>
-      {/* <div>{messagePromptSection}</div> */}
+      {messagePromptSection}
       <div className="code-snippet__footer">
         <div
-          className="code-snippet__footer-checkbox"
+          className="code-snippet__footer-item code-snippet__footer-item--first"
           onClick={() => setShowPrompts(!showPrompts)}
         >
           <input
@@ -67,6 +73,11 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
             onChange={() => setShowPrompts(!showPrompts)}
           />
           Toggle prompts
+        </div>
+
+        <div className="code-snippet__footer-item code-snippet__footer-item--large">
+          <FiExternalLink />
+          Open in CodeSandbox
         </div>
       </div>
     </div>

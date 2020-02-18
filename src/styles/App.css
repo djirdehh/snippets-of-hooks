@@ -22,9 +22,18 @@
 }
 
 .app__code-snippet {
-  display: flex;
   flex-basis: 45%;
-  align-items: center;
-  justify-content: center;
   background-color: #121212;
+}
+
+@media (max-width: 820px) {
+  #app {
+    flex-direction: column;
+  }
+
+  .app__code-summary-footer {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 }
