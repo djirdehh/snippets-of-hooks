@@ -37,7 +37,7 @@ export const useStateSummary = () => {
         <div>
           <FiLink size={15} />{" "}
           <a
-            href="https://reactjs.org/docs/hooks-state.html"
+            href="https://reactjs.org/docs/hooks-reference.html#usestate"
             target="_blank"
             rel="noopener noreferrer"
           >
