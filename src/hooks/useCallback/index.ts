@@ -1,8 +1,8 @@
-import { memoizedCallback } from "./memoizedCallback";
+import { createMemoizedCallback } from "./createMemoizedCallback";
 import { useCallbackSummary } from "./useCallbackSummary";
 
 export const useCallbackHook = {
   id: "useCallback",
-  snippets: [memoizedCallback],
+  snippets: [createMemoizedCallback],
   summary: useCallbackSummary
 };

@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import { CodeSnippet, CodeSummary } from "./sections";
-import { useStateHook, useEffectHook, useCallbackHook } from "./hooks";
+import {
+  useStateHook,
+  useEffectHook,
+  useCallbackHook,
+  useRefHook,
+  useLayoutEffectHook,
+  useDebugValueHook
+} from "./hooks";
 
 import "./styles/App.css";
 
-const listOfHooks = [useStateHook, useEffectHook, useCallbackHook];
+const listOfHooks = [
+  useStateHook,
+  useEffectHook,
+  useCallbackHook,
+  useRefHook,
+  useLayoutEffectHook,
+  useDebugValueHook
+];
 
 export const App = () => {
   const [currentCodeSummary, setCurrentCodeSummary] = useState<React.ReactNode>(
@@ -21,7 +35,10 @@ export const App = () => {
   const hookDropdownOptions = [
     { value: "useState", label: "useState" },
     { value: "useEffect", label: "useEffect" },
-    { value: "useCallback", label: "useCallback" }
+    { value: "useCallback", label: "useCallback" },
+    { value: "useRef", label: "useRef" },
+    { value: "useLayoutEffect", label: "useLayoutEffect" },
+    { value: "useDebugValue", label: "useDebugValue" }
   ];
 
   const [currentSnippetDropdownOption, setCurrentSnippetDropdownOption] = useState(
