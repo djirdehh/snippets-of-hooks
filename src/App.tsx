@@ -7,6 +7,7 @@ import {
   useContextHook,
   useReducerHook,
   useCallbackHook,
+  useMemoHook,
   useRefHook,
   useLayoutEffectHook,
   useDebugValueHook
@@ -20,6 +21,7 @@ const listOfHooks = [
   useContextHook,
   useReducerHook,
   useCallbackHook,
+  useMemoHook,
   useRefHook,
   useLayoutEffectHook,
   useDebugValueHook
@@ -42,6 +44,7 @@ export const App = () => {
     { value: "useContext", label: "useContext" },
     { value: "useReducer", label: "useReducer" },
     { value: "useCallback", label: "useCallback" },
+    { value: "useMemo", label: "useMemo" },
     { value: "useRef", label: "useRef" },
     { value: "useLayoutEffect", label: "useLayoutEffect" },
     { value: "useDebugValue", label: "useDebugValue" }
