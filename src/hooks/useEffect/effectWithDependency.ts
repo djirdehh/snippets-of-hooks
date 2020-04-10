@@ -15,6 +15,6 @@ export const FunctionComponent = () => {
 };`,
   notes: {
     "9":
-      "Passing a dependency in the dependencies list will tell React to re-run the effect every time the dependency changes."
+      "Passing a dependency in the dependencies list will tell React to re-run the effect every time the dependency changes!"
   }
 };

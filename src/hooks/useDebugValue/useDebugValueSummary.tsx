@@ -9,7 +9,8 @@ export const useDebugValueSummary = () => {
         <code className="code-summary__signature">
           <h5 className="code-summary__section-title">Signature</h5>
           <code className="code-summary__signature--function">useDebugValue</code>(
-          <code className="code-summary__signature--argument">value</code>);
+          <code className="code-summary__signature--argument">value</code>,
+          <code className="code-summary__signature--argument">format</code>);
         </code>
       </div>
       <div>
@@ -23,7 +24,8 @@ export const useDebugValueSummary = () => {
           >
             React Devtools
           </a>{" "}
-          for custom created hooks.
+          for custom created hooks. Most helpful when used for custom Hooks that are part
+          of shared libraries.
         </blockquote>
       </div>
       <div className="code-summary__links">

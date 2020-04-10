@@ -4,6 +4,8 @@ import { CodeSnippet, CodeSummary } from "./sections";
 import {
   useStateHook,
   useEffectHook,
+  useContextHook,
+  useReducerHook,
   useCallbackHook,
   useRefHook,
   useLayoutEffectHook,
@@ -15,6 +17,8 @@ import "./styles/App.css";
 const listOfHooks = [
   useStateHook,
   useEffectHook,
+  useContextHook,
+  useReducerHook,
   useCallbackHook,
   useRefHook,
   useLayoutEffectHook,
@@ -35,6 +39,8 @@ export const App = () => {
   const hookDropdownOptions = [
     { value: "useState", label: "useState" },
     { value: "useEffect", label: "useEffect" },
+    { value: "useContext", label: "useContext" },
+    { value: "useReducer", label: "useReducer" },
     { value: "useCallback", label: "useCallback" },
     { value: "useRef", label: "useRef" },
     { value: "useLayoutEffect", label: "useLayoutEffect" },
