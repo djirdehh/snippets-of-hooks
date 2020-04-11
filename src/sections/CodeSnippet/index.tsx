@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { CodeSnippet as ICodeSnippet } from "../../lib/types";
 import { FiExternalLink, FiMessageCircle } from "react-icons/fi";
+
+import { CodeSnippet as ICodeSnippet } from "../../lib/types";
 
 import "./styles/CodeSnippet.css";
 
@@ -76,8 +77,10 @@ export const CodeSnippet = ({ codeSnippet }: Props) => {
         </div>
 
         <div className="code-snippet__footer-item code-snippet__footer-item--large">
-          <FiExternalLink />
-          Open in CodeSandbox
+          <a href={codeSnippet.link} target="_blank" rel="noopener noreferrer">
+            <FiExternalLink />
+            Open in CodeSandbox
+          </a>
         </div>
       </div>
     </div>

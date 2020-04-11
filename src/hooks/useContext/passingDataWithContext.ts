@@ -29,5 +29,6 @@ const ParentComponent = () => {
     "16":
       "wrap the child component with the Context provider to have the child subscribe to context changes."
   },
-  fontSize: 13
+  fontSize: 13,
+  link: "https://codesandbox.io/s/usecontext-ycnup"
 };

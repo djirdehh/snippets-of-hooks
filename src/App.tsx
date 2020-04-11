@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
+import { FaTwitter } from "react-icons/fa";
+import { GithubCorner } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
   useStateHook,
@@ -99,11 +101,15 @@ export const App = () => {
 
   return (
     <div id="app">
+      <GithubCorner />
       <div className="app__code-summary">
         <CodeSummary
           currentCodeSummary={currentCodeSummary}
           dropdownElement={snippetSelectDropdown}
         />
+        <div className="app__code-summary-footer-social">
+          <FaTwitter size={18} />
+        </div>
         <div className="app__code-summary-footer">
           <div className="app__code-summary-footer-dropdown">{hookSelectDropdown}</div>
         </div>

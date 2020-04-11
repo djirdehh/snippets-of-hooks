@@ -5,7 +5,7 @@ export const updateStateWithPreviousState: CodeSnippet = {
   title: "Update value of state variable with previous state value",
   code: `import React, { useState } from "react";
 
-export const FunctionComponent = () => {
+const FunctionComponent = () => {
   const [superhero, updateSuperhero] = useState(
     "Spider-Man"
   );
@@ -29,5 +29,6 @@ export const FunctionComponent = () => {
     "13":
       "Use the functional update form of the update state function. Function passed in has access to previous state value."
   },
-  fontSize: 14
+  fontSize: 14,
+  link: "https://codesandbox.io/s/usestate04-lk0yk"
 };

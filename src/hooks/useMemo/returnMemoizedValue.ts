@@ -18,9 +18,7 @@ const FunctionComponent = () => {
   );
 
   return (
-    <div>
-      {memoizedRandomSuperhero}
-    </div>
+    <h2>{memoizedRandomSuperhero}</h2>
   );
 };`,
   notes: {

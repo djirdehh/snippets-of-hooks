@@ -5,7 +5,7 @@ export const initializeWithFunction: CodeSnippet = {
   title: "Initialize state variable with function",
   code: `import React, { useState } from "react";
 
-export const FunctionComponent = () => {
+const FunctionComponent = () => {
   const [superhero] = useState(() => "Spider-Man");
 
   return (
@@ -18,5 +18,6 @@ export const FunctionComponent = () => {
     "1": "import the useState Hook",
     "4": "initialize state variable with function",
     "8": "render state variable"
-  }
+  },
+  link: "https://codesandbox.io/s/usestate02-tuyej"
 };

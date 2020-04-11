@@ -10,6 +10,14 @@
   flex-direction: column;
   align-items: center;
   flex-basis: 55%;
+  position: relative;
+}
+
+.app__code-summary-footer-social {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: #4c6ef5;
 }
 
 .app__code-summary-footer {

@@ -52,5 +52,6 @@ const FunctionComponent = () => {
     "19": "Render state value",
     "20": "Trigger the dispatch on button click"
   },
-  fontSize: 11
+  fontSize: 11,
+  link: "https://codesandbox.io/s/usereducer02-68v8y"
 };

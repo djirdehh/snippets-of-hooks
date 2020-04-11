@@ -3,19 +3,34 @@ import { CodeSnippet } from "../../lib/types";
 export const createMemoizedCallback: CodeSnippet = {
   id: "useCallback_01",
   title: "Create a memoized callback function",
-  code: `import React, { useCallback } from "react";
+  code: `import React, { useState, useCallback } from "react";
 
-export const FunctionComponent = () => {
-  const memoizedCallback = useCallback(() => {
-    console.log("callback function has run");
-  }, [dependency]);
+const FunctionComponent = () => {
+  const [superhero, updateSuperhero] = useState("Spider-Man");
+
+  const setSuperhero = useCallback(newSuperhero => {
+    updateSuperhero(newSuperhero);
+  }, []);
+
+  return (
+    <div>
+      <h2>{superhero}</h2>
+      <button
+        onClick={() => setSuperhero("Iron Man")}
+      >
+        Update Superhero!
+      </button>
+    </div>
+  );
 };`,
   notes: {
-    "4":
-      "create a memoized callback function that doesn't change until value of dependency changes",
-    "5":
-      "create a memoized callback function that doesn't change until value of dependency changes",
     "6":
-      "create a memoized callback function that doesn't change until value of dependency changes"
-  }
+      "create a memoized callback function that doesn't change until value of a dependency changes",
+    "7":
+      "create a memoized callback function that doesn't change until value of a dependency changes",
+    "8":
+      "create a memoized callback function that doesn't change until value of a dependency changes"
+  },
+  fontSize: 13,
+  link: "https://codesandbox.io/s/usecallback-o0djb"
 };

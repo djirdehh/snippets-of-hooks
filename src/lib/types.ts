@@ -6,4 +6,5 @@ export interface CodeSnippet {
     [index: string]: string;
   };
   fontSize?: number;
+  link?: string;
 }

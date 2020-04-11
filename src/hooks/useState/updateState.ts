@@ -5,7 +5,7 @@ export const updateState: CodeSnippet = {
   title: "Update value of state variable",
   code: `import React, { useState } from "react";
 
-export const FunctionComponent = () => {
+const FunctionComponent = () => {
   const [superhero, updateSuperhero] = useState(
     "Spider-Man"
   );
@@ -27,5 +27,6 @@ export const FunctionComponent = () => {
     "12": "trigger function to update state variable",
     "13": "trigger function to update state variable"
   },
-  fontSize: 14
+  fontSize: 14,
+  link: "https://codesandbox.io/s/usestate03-4s6q7"
 };

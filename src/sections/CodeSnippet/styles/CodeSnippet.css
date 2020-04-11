@@ -70,6 +70,11 @@
   top: 1px;
 }
 
+.code-snippet__footer-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 820px) {
   .code-snippet__code {
     margin-bottom: 50px;
