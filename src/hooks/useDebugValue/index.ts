@@ -5,5 +5,6 @@ import { useDebugValueSummary } from "./useDebugValueSummary";
 export const useDebugValueHook = {
   id: "useDebugValue",
   snippets: [createDevToolsLabelForCustomHook, deferFormattingToWhenInspected],
-  summary: useDebugValueSummary
+  summary: useDebugValueSummary,
+  pdf: ""
 };

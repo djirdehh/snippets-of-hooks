@@ -12,5 +12,6 @@ export const useLayoutEffectHook = {
     effectWithCleanUp,
     effectWithDependency
   ],
-  summary: useLayoutEffectSummary
+  summary: useLayoutEffectSummary,
+  pdf: ""
 };

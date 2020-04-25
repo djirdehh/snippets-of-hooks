@@ -33,6 +33,7 @@ export const App = () => {
   const [currentCodeSummary, setCurrentCodeSummary] = useState<React.ReactNode>(
     useStateHook.summary
   );
+  const [currentCodePDF, setCurrentCodePDF] = useState(useStateHook.pdf);
   const [currentCodeSnippet, setCurrentCodeSnippet] = useState(useStateHook.snippets[0]);
   const [listOfCodeSnippets, setListOfCodeSnippets] = useState(useStateHook.snippets);
 
@@ -87,6 +88,7 @@ export const App = () => {
 
         if (selectedHook) {
           setCurrentCodeSummary(selectedHook.summary);
+          setCurrentCodePDF(selectedHook.pdf);
           setCurrentCodeSnippet(selectedHook.snippets[0]);
           setListOfCodeSnippets(selectedHook.snippets);
           setCurrentSnippetDropdownOption({
@@ -105,6 +107,7 @@ export const App = () => {
       <div className="app__code-summary">
         <CodeSummary
           currentCodeSummary={currentCodeSummary}
+          currentCodePDF={currentCodePDF}
           dropdownElement={snippetSelectDropdown}
         />
         <div className="app__code-summary-footer-social">

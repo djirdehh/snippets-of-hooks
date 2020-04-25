@@ -5,5 +5,6 @@ import { useReducerSummary } from "./useReducerSummary";
 export const useReducerHook = {
   id: "useReducer",
   snippets: [dispatchActionToUpdateState, lazyInitializationOfState],
-  summary: useReducerSummary
+  summary: useReducerSummary,
+  pdf: ""
 };

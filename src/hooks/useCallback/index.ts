@@ -4,5 +4,6 @@ import { useCallbackSummary } from "./useCallbackSummary";
 export const useCallbackHook = {
   id: "useCallback",
   snippets: [createMemoizedCallback],
-  summary: useCallbackSummary
+  summary: useCallbackSummary,
+  pdf: ""
 };

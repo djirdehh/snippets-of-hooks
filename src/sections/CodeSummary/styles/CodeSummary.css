@@ -19,6 +19,50 @@
   max-width: 450px;
 }
 
+.code-summary__button-section {
+  margin-top: 30px;
+}
+
+.code-summary__button-section button {
+  display: block;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border: 0;
+  background: none;
+  padding: 9px 22px 9px 16px;
+  line-height: 26px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  z-index: 0;
+}
+
+.code-summary__button-section button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 8px #e1e6f9;
+}
+
+.code-summary__button-section button span {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.code-summary__button-section button span svg {
+  padding-right: 5px;
+}
+
 .code-summary__section-title {
   font-family: Hind;
   text-transform: uppercase;

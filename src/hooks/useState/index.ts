@@ -12,5 +12,7 @@ export const useStateHook = {
     updateState,
     updateStateWithPreviousState
   ],
-  summary: useStateSummary
+  summary: useStateSummary,
+  pdf:
+    "https://res.cloudinary.com/djirdehh/image/upload/v1586706760/hooks-cheatsheets/use-state.pdf"
 };

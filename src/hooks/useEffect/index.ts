@@ -12,5 +12,7 @@ export const useEffectHook = {
     effectWithCleanUp,
     effectWithDependency
   ],
-  summary: useEffectSummary
+  summary: useEffectSummary,
+  pdf:
+    "https://res.cloudinary.com/djirdehh/image/upload/v1586712125/hooks-cheatsheets/use-effect.pdf"
 };
