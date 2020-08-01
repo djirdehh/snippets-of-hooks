@@ -13,5 +13,6 @@ export const useLayoutEffectHook = {
     effectWithDependency
   ],
   summary: useLayoutEffectSummary,
-  pdf: ""
+  pdf:
+    "https://res.cloudinary.com/djirdehh/image/upload/v1587936042/use-layout-effect.pdf"
 };

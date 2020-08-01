@@ -1,0 +1,49 @@
+.code-summary-message-prompt {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  min-width: 70%;
+}
+
+blockquote.code-summary-message-prompt {
+  padding: 2rem;
+  box-shadow: 3px 3px 15px #ccc;
+  border: 1px solid #eee;
+  border-top: 10px solid #121212;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+blockquote.code-summary-message-prompt p {
+  display: flex;
+  align-items: center;
+  font-family: Hind;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+blockquote.code-summary-message-prompt p svg {
+  padding-right: 5px;
+  position: relative;
+  bottom: 2px;
+}
+
+blockquote.code-summary-message-prompt h4 {
+  font-family: DM Sans, sans-serif;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 0;
+}
+
+blockquote.code-summary-message-prompt h5 {
+  font-family: DM Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}

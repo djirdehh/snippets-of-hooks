@@ -1,5 +1,6 @@
 import React from "react";
 import { FiLink } from "react-icons/fi";
+import { TextPopover } from "../../components";
 
 export const useContextSummary = () => {
   return (
@@ -17,7 +18,19 @@ export const useContextSummary = () => {
       <div>
         <h5 className="code-summary__section-title">Description</h5>
         <blockquote className="code-summary__description">
-          Provides function components access to the context value for a context object.
+          Provides function components access to the{" "}
+          <TextPopover
+            message={
+              <>
+                <b>Context</b> provides a useful way to have data be passed down a
+                component tree without having to resort to <i>prop-drilling</i> (i.e.
+                manually passing props down along every child component).
+              </>
+            }
+          >
+            context
+          </TextPopover>{" "}
+          value for a context object.
         </blockquote>
       </div>
       <div className="code-summary__links">

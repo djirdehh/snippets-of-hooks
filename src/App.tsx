@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Select from "react-select";
+import classNames from "classnames";
 import { FaTwitter } from "react-icons/fa";
-import { GithubCorner } from "./components";
+import { CodeMessagePrompt, GithubCorner } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
   useStateHook,
@@ -12,7 +13,8 @@ import {
   useMemoHook,
   useRefHook,
   useLayoutEffectHook,
-  useDebugValueHook
+  useDebugValueHook,
+  useImperativeHandleHook,
 } from "./hooks";
 
 import "./styles/App.css";
@@ -26,7 +28,8 @@ const listOfHooks = [
   useMemoHook,
   useRefHook,
   useLayoutEffectHook,
-  useDebugValueHook
+  useDebugValueHook,
+  useImperativeHandleHook,
 ];
 
 export const App = () => {
@@ -37,7 +40,11 @@ export const App = () => {
   const [currentCodeSnippet, setCurrentCodeSnippet] = useState(useStateHook.snippets[0]);
   const [listOfCodeSnippets, setListOfCodeSnippets] = useState(useStateHook.snippets);
 
-  const snippetDropdownOptions = listOfCodeSnippets.map(codeSnippet => {
+  const [messagePrompt, setMessagePrompt] = useState("");
+  const [lineNumberPrompt, setLineNumberPrompt] = useState<number | null>(null);
+  const [showCodePrompts, setShowCodePrompts] = useState(false);
+
+  const snippetDropdownOptions = listOfCodeSnippets.map((codeSnippet) => {
     return { value: codeSnippet.id, label: codeSnippet.title };
   });
 
@@ -50,7 +57,8 @@ export const App = () => {
     { value: "useMemo", label: "useMemo" },
     { value: "useRef", label: "useRef" },
     { value: "useLayoutEffect", label: "useLayoutEffect" },
-    { value: "useDebugValue", label: "useDebugValue" }
+    { value: "useDebugValue", label: "useDebugValue" },
+    { value: "useImperativeHandle", label: "useImperativeHandle" },
   ];
 
   const [currentSnippetDropdownOption, setCurrentSnippetDropdownOption] = useState(
@@ -67,7 +75,7 @@ export const App = () => {
       menuPlacement="auto"
       onChange={(selectedOption: any) => {
         const selectedCodeSnippet = listOfCodeSnippets.find(
-          codeSnippet => codeSnippet.id === selectedOption.value
+          (codeSnippet) => codeSnippet.id === selectedOption.value
         );
 
         if (selectedCodeSnippet) {
@@ -84,7 +92,7 @@ export const App = () => {
       options={hookDropdownOptions}
       menuPlacement="top"
       onChange={(selectedOption: any) => {
-        const selectedHook = listOfHooks.find(hook => hook.id === selectedOption.value);
+        const selectedHook = listOfHooks.find((hook) => hook.id === selectedOption.value);
 
         if (selectedHook) {
           setCurrentCodeSummary(selectedHook.summary);
@@ -93,7 +101,7 @@ export const App = () => {
           setListOfCodeSnippets(selectedHook.snippets);
           setCurrentSnippetDropdownOption({
             value: selectedHook.snippets[0].id,
-            label: selectedHook.snippets[0].title
+            label: selectedHook.snippets[0].title,
           });
           setCurrentHookDropdownOption(selectedOption);
         }
@@ -101,24 +109,49 @@ export const App = () => {
     />
   );
 
+  const messagePromptSection = showCodePrompts ? (
+    <CodeMessagePrompt
+      lineNumberPrompt={lineNumberPrompt}
+      messagePrompt={messagePrompt}
+    />
+  ) : null;
+
   return (
     <div id="app">
       <GithubCorner />
-      <div className="app__code-summary">
+      <div
+        className={classNames({
+          "app__code-summary": true,
+          "app__code-summary--blur": showCodePrompts,
+        })}
+      >
+        {messagePromptSection}
         <CodeSummary
           currentCodeSummary={currentCodeSummary}
           currentCodePDF={currentCodePDF}
           dropdownElement={snippetSelectDropdown}
         />
-        <div className="app__code-summary-footer-social">
+        <a
+          href="https://twitter.com/djirdehh"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="app__code-summary-footer-social"
+        >
           <FaTwitter size={18} />
-        </div>
+        </a>
         <div className="app__code-summary-footer">
           <div className="app__code-summary-footer-dropdown">{hookSelectDropdown}</div>
         </div>
       </div>
       <div className="app__code-snippet">
-        <CodeSnippet codeSnippet={currentCodeSnippet} />
+        <CodeSnippet
+          codeSnippet={currentCodeSnippet}
+          showCodePrompts={showCodePrompts}
+          messagePrompt={messagePrompt}
+          setShowCodePrompts={setShowCodePrompts}
+          setMessagePrompt={setMessagePrompt}
+          setLineNumberPrompt={setLineNumberPrompt}
+        />
       </div>
     </div>
   );

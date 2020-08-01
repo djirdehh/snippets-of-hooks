@@ -1,5 +1,6 @@
 import React from "react";
 import { FiLink } from "react-icons/fi";
+import { TextPopover } from "components";
 
 export const useStateSummary = () => {
   return (
@@ -18,8 +19,19 @@ export const useStateSummary = () => {
       <div>
         <h5 className="code-summary__section-title">Description</h5>
         <blockquote className="code-summary__description">
-          Helps allow us to add state to functional components. Returns a stateful value
-          and a function to update it.
+          Helps allow us to add{" "}
+          <TextPopover
+            message={
+              <>
+                State is data that is <b>kept and tracked locally within a component</b>.
+                When the state of a component updates, the component will re-render
+                itself.
+              </>
+            }
+          >
+            state
+          </TextPopover>{" "}
+          to functional components. Returns a stateful value and a function to update it.
         </blockquote>
       </div>
       <div className="code-summary__links">

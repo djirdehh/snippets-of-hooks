@@ -15,9 +15,9 @@ const FunctionComponent = () => {
   );
 };`,
   notes: {
-    "1": "import the useState Hook",
-    "4": "initialize state variable",
-    "8": "render state variable"
+    "1": "Import the useState Hook.",
+    "4": "Initialize state variable.",
+    "8": "Render state variable."
   },
   link: "https://codesandbox.io/s/usestate01-mj3qf"
 };

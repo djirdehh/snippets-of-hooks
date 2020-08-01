@@ -1,7 +1,7 @@
 #app {
   display: flex;
   height: 100%;
-  font-family: Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+  font-family: DM Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -11,6 +11,15 @@
   align-items: center;
   flex-basis: 55%;
   position: relative;
+}
+
+.app__code-summary--blur #code-summary,
+.app__code-summary--blur .app__code-summary-footer-social,
+.app__code-summary--blur .app__code-summary-footer {
+  filter: blur(12px) grayscale(50%);
+  -webkit-transition: -webkit-filter 500ms linear;
+  transition: 0.2s filter linear, 0.2s -webkit-filter linear;
+  pointer-events: none;
 }
 
 .app__code-summary-footer-social {
@@ -26,7 +35,7 @@
 }
 
 .app__code-summary-footer-dropdown {
-  min-width: 180px;
+  min-width: 190px;
 }
 
 .app__code-snippet {
@@ -43,5 +52,10 @@
     position: absolute;
     right: 10px;
     top: 10px;
+  }
+
+  .app__code-summary-footer-social {
+    right: 10px;
+    left: initial;
   }
 }

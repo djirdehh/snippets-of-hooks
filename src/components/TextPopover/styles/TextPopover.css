@@ -1,0 +1,32 @@
+.text-popover-container {
+  display: inline-block;
+  position: relative;
+}
+
+.text-popover-container span {
+  color: #3c4fe0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-popover {
+  background: #fff;
+  border-radius: 4px;
+  width: 300px;
+  padding: 15px;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 100%;
+  left: -146px;
+  box-shadow: 3px 3px 15px #ccc;
+  border: 1px solid #eee;
+  border-top: 12px solid #121212;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.text-popover p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+}

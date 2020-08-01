@@ -12,27 +12,6 @@
   margin: 0 auto;
 }
 
-.code-snippet__message-prompt {
-  color: rgb(230, 219, 116);
-  position: absolute;
-  right: 20px;
-  bottom: 60px;
-  max-width: 300px;
-  text-align: center;
-}
-
-.code-snippet__message-prompt svg {
-  display: block;
-  margin: 0 auto;
-}
-
-.code-snippet__message-prompt span {
-  padding-left: 10px;
-  font-family: Hind;
-  font-size: 11px;
-  letter-spacing: 0.7px;
-}
-
 .code-snippet__footer {
   color: #fff;
   position: absolute;
@@ -45,9 +24,9 @@
 .code-snippet__footer-item {
   font-family: Hind;
   font-size: 11px;
-  width: 110px;
+  width: 120px;
   cursor: pointer;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   display: inline-block;
   margin-right: 20px;
 }

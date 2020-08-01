@@ -24,9 +24,9 @@ const FunctionComponent = () => {
   );
 };`,
   notes: {
-    "6": "function passed into the Hook is the 'effect' that is to run on every render",
-    "7": "function passed into the Hook is the 'effect' that is to run on every render",
-    "8": "function passed into the Hook is the 'effect' that is to run on every render"
+    "6": "Function passed into the Hook is the 'effect' that is to run on every render.",
+    "7": "Function passed into the Hook is the 'effect' that is to run on every render.",
+    "8": "Function passed into the Hook is the 'effect' that is to run on every render."
   },
   fontSize: 12,
   link: "https://codesandbox.io/s/useeffect01-tpbio"

@@ -6,5 +6,5 @@ export const useDebugValueHook = {
   id: "useDebugValue",
   snippets: [createDevToolsLabelForCustomHook, deferFormattingToWhenInspected],
   summary: useDebugValueSummary,
-  pdf: ""
+  pdf: "https://res.cloudinary.com/djirdehh/image/upload/v1587934818/use-debug-value.pdf"
 };

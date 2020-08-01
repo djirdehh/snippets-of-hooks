@@ -5,5 +5,5 @@ export const useCallbackHook = {
   id: "useCallback",
   snippets: [createMemoizedCallback],
   summary: useCallbackSummary,
-  pdf: ""
+  pdf: "https://res.cloudinary.com/djirdehh/image/upload/v1587936686/use-callback.pdf"
 };
