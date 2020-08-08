@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 import classNames from "classnames";
 import { FaTwitter } from "react-icons/fa";
-import { CodeMessagePrompt, GithubCorner } from "./components";
+import { CodeMessagePrompt, GithubCorner, Logo } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
   useStateHook,
@@ -125,6 +125,10 @@ export const App = () => {
           "app__code-summary--blur": showCodePrompts,
         })}
       >
+        <div className="app__code-summary-title">
+          <Logo />
+          <h2>Snippets of Hooks</h2>
+        </div>
         {messagePromptSection}
         <CodeSummary
           currentCodeSummary={currentCodeSummary}

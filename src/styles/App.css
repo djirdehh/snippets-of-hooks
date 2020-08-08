@@ -13,7 +13,26 @@
   position: relative;
 }
 
+.app__code-summary-title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+}
+
+.app__code-summary-title svg {
+  display: inline-block;
+  position: relative;
+  bottom: 3px;
+}
+
+.app__code-summary-title h2 {
+  display: inline-block;
+}
+
 .app__code-summary--blur #code-summary,
+.app__code-summary--blur .app__code-summary-title,
 .app__code-summary--blur .app__code-summary-footer-social,
 .app__code-summary--blur .app__code-summary-footer {
   filter: blur(12px) grayscale(50%);
@@ -41,6 +60,12 @@
 .app__code-snippet {
   flex-basis: 45%;
   background-color: #121212;
+}
+
+@media (max-width: 1000px) {
+  .app__code-summary-title {
+    display: none;
+  }
 }
 
 @media (max-width: 820px) {

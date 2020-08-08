@@ -8,13 +8,13 @@ export const returnMemoizedValue: CodeSnippet = {
 const FunctionComponent = () => {
   const superheroes = ["Spider-Man", "Iron Man"];
   const getRandomSuperhero = () =>
-    superheros[
-      Math.floor(Math.random() * superheros.length)
+    superheroes[
+      Math.floor(Math.random() * superheroes.length)
     ];
 
   const memoizedRandomSuperhero = useMemo(
     getRandomSuperhero,
-    [superheros]
+    [superheroes]
   );
 
   return (
@@ -29,7 +29,8 @@ const FunctionComponent = () => {
     "12":
       "Return a memoized value that won't be recomputed (i.e. getRandomSuperhero() function won't run) only until dependancy (i.e. superheroes) changes.",
     "13":
-      "Return a memoized value that won't be recomputed (i.e. getRandomSuperhero() function won't run) only until dependancy (i.e. superheroes) changes."
+      "Return a memoized value that won't be recomputed (i.e. getRandomSuperhero() function won't run) only until dependancy (i.e. superheroes) changes.",
   },
-  fontSize: 13
+  fontSize: 13,
+  link: "https://codesandbox.io/s/usememo01-grerg",
 };

@@ -10,9 +10,9 @@ export const useLayoutEffectHook = {
     effectOnEveryRender,
     effectOnFirstRender,
     effectWithCleanUp,
-    effectWithDependency
+    effectWithDependency,
   ],
   summary: useLayoutEffectSummary,
   pdf:
-    "https://res.cloudinary.com/djirdehh/image/upload/v1587936042/use-layout-effect.pdf"
+    "https://res.cloudinary.com/djirdehh/image/upload/v1587936042/hooks-cheatsheets/use-layout-effect.pdf",
 };

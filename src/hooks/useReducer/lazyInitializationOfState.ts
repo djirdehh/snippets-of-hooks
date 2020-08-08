@@ -5,7 +5,7 @@ export const lazyInitializationOfState: CodeSnippet = {
   title: "Lazy initialization of state",
   code: `import React, { useReducer } from "react";
 
-function reducer(_state, action) {
+const reducer = (_state, action) => {
   switch (action.type) {
     case "UPDATE_SUPERHERO":
       return { superhero: action.payload };
@@ -28,30 +28,31 @@ const FunctionComponent = () => {
 };`,
   notes: {
     "3":
-      "Reducer function that updates the superhero state variable with the action payload when the UPDATE_SUPERHERO action is triggered.",
+      "Reducer function that returns the updated state based on the type of action conducted. In this example, the value of the state returned is derived from the payload of the action.",
     "4":
-      "Reducer function that updates the superhero state variable with the action payload when the UPDATE_SUPERHERO action is triggered.",
+      "Reducer function that returns the updated state based on the type of action conducted. In this example, the value of the state returned is derived from the payload of the action.",
     "5":
-      "Reducer function that updates the superhero state variable with the action payload when the UPDATE_SUPERHERO action is triggered.",
+      "Reducer function that returns the updated state based on the type of action conducted. In this example, the value of the state returned is derived from the payload of the action.",
     "6":
-      "Reducer function that updates the superhero state variable with the action payload when the UPDATE_SUPERHERO action is triggered.",
+      "Reducer function that returns the updated state based on the type of action conducted. In this example, the value of the state returned is derived from the payload of the action.",
     "7":
-      "Reducer function that updates the superhero state variable with the action payload when the UPDATE_SUPERHERO action is triggered.",
+      "Reducer function that returns the updated state based on the type of action conducted. In this example, the value of the state returned is derived from the payload of the action.",
     "8":
-      "Reducer function that updates the superhero state variable with the action payload when the UPDATE_SUPERHERO action is triggered.",
+      "Reducer function that returns the updated state based on the type of action conducted. In this example, the value of the state returned is derived from the payload of the action.",
     "10":
       "Initialization function passed in the useReducer Hook to initialize the state object lazily.",
     "13":
-      "Destructuring state variable and dispatch function from useReducer. When executing useReducer, reducer function, initial state value, and initialization function is passed in.",
+      "Initialization function passed in the useReducer Hook to initialize the state object lazily.",
     "14":
-      "Creating function that runs the dispatch function and trigger the UPDATE_SUPERHERO action with the intended payload.",
+      "Component function that triggers the dispatch of an action and specifies the action type being dispatched and the action payload.",
     "15":
-      "Creating function that runs the dispatch function and trigger the UPDATE_SUPERHERO action with the intended payload.",
+      "Component function that triggers the dispatch of an action and specifies the action type being dispatched and the action payload.",
     "16":
-      "Creating function that runs the dispatch function and trigger the UPDATE_SUPERHERO action with the intended payload.",
+      "Component function that triggers the dispatch of an action and specifies the action type being dispatched and the action payload.",
     "19": "Render state value",
-    "20": "Trigger the dispatch on button click"
+    "20":
+      "Component function that triggers the dispatch of an action and specifies the action type being dispatched and the action payload.",
   },
   fontSize: 11,
-  link: "https://codesandbox.io/s/usereducer02-68v8y"
+  link: "https://codesandbox.io/s/usereducer02-68v8y",
 };

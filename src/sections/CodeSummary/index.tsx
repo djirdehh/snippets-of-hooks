@@ -12,7 +12,7 @@ interface Props {
 export const CodeSummary = ({
   currentCodeSummary,
   currentCodePDF,
-  dropdownElement
+  dropdownElement,
 }: Props) => {
   const launchPDF = () => {
     window.open(currentCodePDF);

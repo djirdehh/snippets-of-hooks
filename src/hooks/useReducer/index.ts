@@ -6,5 +6,6 @@ export const useReducerHook = {
   id: "useReducer",
   snippets: [dispatchActionToUpdateState, lazyInitializationOfState],
   summary: useReducerSummary,
-  pdf: ""
+  pdf:
+    "https://res.cloudinary.com/djirdehh/image/upload/v1596924327/hooks-cheatsheets/use-reducer.pdf",
 };

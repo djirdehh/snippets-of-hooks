@@ -5,5 +5,6 @@ export const useMemoHook = {
   id: "useMemo",
   snippets: [returnMemoizedValue],
   summary: useMemoSummary,
-  pdf: ""
+  pdf:
+    "https://res.cloudinary.com/djirdehh/image/upload/v1596924315/hooks-cheatsheets/use-memo.pdf",
 };

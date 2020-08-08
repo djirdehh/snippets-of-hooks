@@ -10,9 +10,9 @@ export const useStateHook = {
     initialize,
     initializeWithFunction,
     updateState,
-    updateStateWithPreviousState
+    updateStateWithPreviousState,
   ],
   summary: useStateSummary,
   pdf:
-    "https://res.cloudinary.com/djirdehh/image/upload/v1586706760/hooks-cheatsheets/use-state.pdf"
+    "https://res.cloudinary.com/djirdehh/image/upload/v1586706760/hooks-cheatsheets/use-state.pdf",
 };
