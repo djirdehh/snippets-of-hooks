@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+#root,
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: auto;
+}

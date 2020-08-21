@@ -1,0 +1,112 @@
+#app {
+  display: flex;
+  height: 100%;
+  font-family: DM Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.app__code-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 55%;
+  position: relative;
+
+  overflow: auto;
+  min-width: 400px;
+}
+
+.app__code-summary-title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+
+  padding: 10px 0 0 10px;
+}
+
+.app__code-summary-title svg {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.app__code-summary-title p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.app__code-summary--blur #code-summary,
+.app__code-summary--blur .app__code-summary-title,
+.app__code-summary--blur .app__code-summary-footer-social,
+.app__code-summary--blur .app__code-summary-footer,
+.app__code-summary--blur .github-corner svg {
+  filter: blur(12px) grayscale(50%);
+  -webkit-transition: -webkit-filter 500ms linear;
+  transition: 0.2s filter linear, 0.2s -webkit-filter linear;
+  pointer-events: none;
+}
+
+.app__code-summary-footer-social {
+  color: #4c6ef5;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.app__code-summary-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.app__code-summary-footer-dropdown {
+  min-width: 190px;
+}
+
+.app__code-snippet {
+  flex-basis: 45%;
+  background-color: #121212;
+}
+
+@media (max-width: 820px) {
+  #app {
+    flex-direction: column;
+  }
+
+  .app__code-summary {
+    overflow: initial;
+    flex-basis: initial;
+    height: 100%;
+    min-width: initial;
+  }
+
+  .app__code-summary-title {
+    left: 0;
+  }
+
+  .app__code-summary-footer-social {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    bottom: initial;
+    left: initial;
+    color: #4c6ef5;
+    z-index: 99;
+  }
+
+  .app__code-snippet {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .app__code-summary-footer-dropdown {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .app__code-summary-footer-dropdown div {
+    border-radius: initial;
+  }
+}
