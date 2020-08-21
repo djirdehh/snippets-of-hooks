@@ -51,15 +51,7 @@ export const useImperativeHandleSummary = () => {
           <li>
             React in and of itself provides a declarative API. Very rarely will you find
             the need to imperatively handle code using refs with the{" "}
-            <b>useImperativeHook</b>, as also mentioned in the{" "}
-            <a
-              href="https://reactjs.org/docs/hooks-reference.html#usedebugvalue"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              React documentation
-            </a>
-            .
+            <b>useImperativeHook</b>.
           </li>
         </ul>
       </div>
