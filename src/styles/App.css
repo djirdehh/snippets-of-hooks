@@ -1,8 +1,9 @@
 #app {
   display: flex;
   height: 100%;
-  font-family: DM Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: DM Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
 .app__code-summary {
@@ -52,6 +53,10 @@
   padding-top: 5px;
 }
 
+.app__code-summary-footer-social--personal {
+  padding-left: 5px;
+}
+
 .app__code-summary-footer {
   margin-top: auto;
   display: flex;
@@ -93,6 +98,15 @@
     left: initial;
     color: #4c6ef5;
     z-index: 99;
+  }
+
+  .app__code-summary-footer-social svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .app__code-summary-footer-social--personal {
+    display: none;
   }
 
   .app__code-snippet {

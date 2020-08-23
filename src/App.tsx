@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import classNames from "classnames";
-import { FaTwitter } from "react-icons/fa";
+import { FaTwitterSquare, FaHSquare } from "react-icons/fa";
 import { CodeMessagePrompt, GithubCorner, ReactLogo } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
@@ -47,7 +47,9 @@ export const App = () => {
   const hook = listOfHooks.find((hook) => hook.id === hookID);
   const hookToView = hook || useStateHook;
 
-  const snippet = hookToView.snippets.find((snippet) => snippet.id === codeSnippetID);
+  const snippet = hookToView.snippets.find(
+    (snippet) => snippet.id === codeSnippetID
+  );
   const snippetToView = snippet || hookToView.snippets[0];
 
   const [currentCodeSummaryInfo, setCurrentCodeSummaryInfo] = useState<
@@ -67,7 +69,9 @@ export const App = () => {
   );
 
   const snippetDropdownOptionSelected = codeSnippetID
-    ? snippetDropdownOptions.find((codeSnippet) => codeSnippet.value === codeSnippetID)
+    ? snippetDropdownOptions.find(
+        (codeSnippet) => codeSnippet.value === codeSnippetID
+      )
     : snippetDropdownOptions[0];
 
   const [messagePrompt, setMessagePrompt] = useState("");
@@ -87,9 +91,10 @@ export const App = () => {
     { value: "useImperativeHandle", label: "useImperativeHandle" },
   ];
 
-  const [currentSnippetDropdownOption, setCurrentSnippetDropdownOption] = useState(
-    snippetDropdownOptionSelected
-  );
+  const [
+    currentSnippetDropdownOption,
+    setCurrentSnippetDropdownOption,
+  ] = useState(snippetDropdownOptionSelected);
   const [currentHookDropdownOption, setCurrentHookDropdownOption] = useState(
     hookID ? { value: hookID, label: hookID } : hookDropdownOptions[0]
   );
@@ -123,7 +128,9 @@ export const App = () => {
       options={hookDropdownOptions}
       menuPlacement="top"
       onChange={(selectedOption: any) => {
-        const selectedHook = listOfHooks.find((hook) => hook.id === selectedOption.value);
+        const selectedHook = listOfHooks.find(
+          (hook) => hook.id === selectedOption.value
+        );
 
         if (selectedHook) {
           setCurrentCodeSummaryInfo({
@@ -180,15 +187,27 @@ export const App = () => {
           dropdownElement={snippetSelectDropdown}
         />
         <div className="app__code-summary-footer">
-          <a
-            href="https://twitter.com/djirdehh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="app__code-summary-footer-social"
-          >
-            <FaTwitter size={18} />
-          </a>
-          <div className="app__code-summary-footer-dropdown">{hookSelectDropdown}</div>
+          <div>
+            <a
+              href="https://twitter.com/djirdehh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="app__code-summary-footer-social"
+            >
+              <FaTwitterSquare size={18} />
+            </a>
+            <a
+              href="https://hassan.rocks/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="app__code-summary-footer-social app__code-summary-footer-social--personal"
+            >
+              <FaHSquare size={18} />
+            </a>
+          </div>
+          <div className="app__code-summary-footer-dropdown">
+            {hookSelectDropdown}
+          </div>
         </div>
       </div>
       <div className="app__code-snippet">
