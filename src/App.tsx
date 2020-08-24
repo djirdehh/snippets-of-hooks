@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import classNames from "classnames";
-import { FaTwitterSquare, FaHSquare } from "react-icons/fa";
+import { FaTwitterSquare, FaEnvelope } from "react-icons/fa";
 import { CodeMessagePrompt, GithubCorner, ReactLogo } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
@@ -194,15 +194,16 @@ export const App = () => {
               rel="noopener noreferrer"
               className="app__code-summary-footer-social"
             >
-              <FaTwitterSquare size={18} />
+              <FaTwitterSquare size={22} />
             </a>
             <a
-              href="https://hassan.rocks/"
+              href="https://hassan.rocks/subscribe"
               target="_blank"
               rel="noopener noreferrer"
               className="app__code-summary-footer-social app__code-summary-footer-social--personal"
             >
-              <FaHSquare size={18} />
+              <FaEnvelope size={14} />
+              Subscribe to my blog
             </a>
           </div>
           <div className="app__code-summary-footer-dropdown">

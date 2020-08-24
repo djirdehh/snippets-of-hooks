@@ -49,12 +49,27 @@
 
 .app__code-summary-footer-social {
   color: #4c6ef5;
-  padding-left: 10px;
-  padding-top: 5px;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  bottom: initial;
+  left: initial;
+  color: #4c6ef5;
+  z-index: 99;
 }
 
 .app__code-summary-footer-social--personal {
-  padding-left: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  position: initial;
+
+  font-size: 12px;
+}
+
+.app__code-summary-footer-social--personal svg {
+  padding-right: 5px;
+  position: relative;
+  top: 3px;
 }
 
 .app__code-summary-footer {
@@ -88,21 +103,6 @@
 
   .app__code-summary-title {
     left: 0;
-  }
-
-  .app__code-summary-footer-social {
-    position: absolute;
-    top: 30px;
-    right: 35px;
-    bottom: initial;
-    left: initial;
-    color: #4c6ef5;
-    z-index: 99;
-  }
-
-  .app__code-summary-footer-social svg {
-    width: 22px;
-    height: 22px;
   }
 
   .app__code-summary-footer-social--personal {
