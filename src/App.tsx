@@ -197,7 +197,7 @@ export const App = () => {
               <FaTwitterSquare size={22} />
             </a>
             <a
-              href="https://hassan.rocks/subscribe"
+              href="https://buttondown.email/djirdehh/"
               target="_blank"
               rel="noopener noreferrer"
               className="app__code-summary-footer-social app__code-summary-footer-social--personal"
