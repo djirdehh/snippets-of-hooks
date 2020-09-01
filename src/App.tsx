@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import classNames from "classnames";
-import { FaTwitterSquare, FaHome } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
 import { CodeMessagePrompt, GithubCorner, ReactLogo } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
@@ -202,8 +202,6 @@ export const App = () => {
               rel="noopener noreferrer"
               className="app__code-summary-footer-social app__code-summary-footer-social--personal"
             >
-              {/* <FaHome size={14} />
-              Cheat sheets from TinyHouse */}
               <img
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=248645&theme=light"
                 alt="Snippets of Hooks - Learn React Hooks — quickly. | Product Hunt Embed"
