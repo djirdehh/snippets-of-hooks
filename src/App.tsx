@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import classNames from "classnames";
-import { FaTwitterSquare } from "react-icons/fa";
+import { FaTwitterSquare, FaHome } from "react-icons/fa";
 import { CodeMessagePrompt, GithubCorner, ReactLogo } from "./components";
 import { CodeSnippet, CodeSummary } from "./sections";
 import {
@@ -197,16 +197,13 @@ export const App = () => {
               <FaTwitterSquare size={22} />
             </a>
             <a
-              href="https://www.producthunt.com/posts/snippets-of-hooks?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-snippets-of-hooks"
+              href="https://newline.co/tinyhouse"
               target="_blank"
               rel="noopener noreferrer"
               className="app__code-summary-footer-social app__code-summary-footer-social--personal"
             >
-              <img
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=248645&theme=light"
-                alt="Snippets of Hooks - Learn React Hooks — quickly. | Product Hunt Embed"
-                style={{ width: "175px", height: "54px" }}
-              />
+              <FaHome size={14} />
+              Cheat sheets from TinyHouse
             </a>
           </div>
           <div className="app__code-summary-footer-dropdown">
